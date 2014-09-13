@@ -11,3 +11,16 @@ defmodule FibClient do
     end
   end
 end
+
+# ex.
+# $ iex --sname foo
+# $ iex --sname bar
+#
+# Node.list  # => []
+#
+# Node.connect :"bar@localhost"
+# Node.list  # => [:"bar@localhost"]
+#
+# FibServer.start
+# FibClient.fib(30)
+#

@@ -21,20 +21,15 @@ defmodule FibServer do
   end
 end
 
-
+# ex.
+# $ iex --sname foo
+# $ iex --sname bar
 #
-# ex.1
+# Node.list  # => []
 #
-# fib = Fib.start  # => PID
-# send fib, {:fib, self, 40}
+# Node.connect :"bar@localhost"
+# Node.list  # => [:"bar@localhost"]
 #
-# receive do
-#   {:ok, n} -> IO.puts "Received: #{n}"
-# end
-#
-#
-# ex.2
-#
-# recv = Receiver.start
-# send fib, {:fib, recv, 40}
+# FibServer.start
+# FibClient.fib(30)
 #

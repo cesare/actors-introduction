@@ -29,3 +29,12 @@ class Receiver
     end
   end
 end
+
+# ex
+#
+# recv = Receiver.new
+# recv.async.wait
+#
+# fib = Fib3.new
+# fib.async.fib(38, recv)
+#

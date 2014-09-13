@@ -2,7 +2,6 @@ defmodule Fib2 do
   def fib(n) do
     IO.puts "Fib2.fib #{n} start"
     worker = spawn __MODULE__, :fibonacci, [n, self]
-    send worker, {:fib, self, n}
 
     IO.puts "Fib2.fib waiting for reply"
     receive do
